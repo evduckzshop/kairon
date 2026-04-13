@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Kairon Brand Colors */
+  --color-kairon-black: #0D0D0D;
+  --color-kairon-dark: #1A1A2E;
+  --color-kairon-navy: #16213E;
+  --color-kairon-teal: #0F3460;
+  --color-kairon-red: #E94560;
+  --color-kairon-light: #F5F5F5;
+  --color-kairon-white: #FFFFFF;
+  --color-kairon-gray: #6B7280;
+  --color-kairon-success: #10B981;
+
+  /* Fonts */
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-kairon-black);
+  color: var(--color-kairon-white);
+  font-family: var(--font-body);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-kairon-red);
+  color: var(--color-kairon-white);
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 1rem;
+  background: var(--color-kairon-red);
+  color: var(--color-kairon-white);
+  font-weight: 600;
+}
+
+.skip-to-content:focus {
+  left: 0;
+}
